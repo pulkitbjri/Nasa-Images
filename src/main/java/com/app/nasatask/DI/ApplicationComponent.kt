@@ -7,14 +7,12 @@ import com.app.nasatask.DI.Network.NetworkModule
 import com.app.nasatask.DI.VMFactory.MyViewModelModule
 import com.app.nasatask.DI.VMFactory.ViewModelFactoryModule
 import com.app.nasatask.DI.database.RoomDBModule
-
-import javax.inject.Singleton
-
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import dagger.android.support.DaggerApplication
+import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [ContextModule::class,AndroidSupportInjectionModule::class, ActivityBindingModule::class, NetworkModule::class,

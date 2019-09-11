@@ -1,42 +1,36 @@
 package com.app.nasatask.Views.MianActivity
 
+import android.app.Dialog
+import android.graphics.Rect
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.view.Window
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.paging.PagedList
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.app.nasa.Base.BaseActivity
 import com.app.nasatask.DI.VMFactory.DaggerViewModelFactory
 import com.app.nasatask.Models.Apod
+import com.app.nasatask.R
 import com.app.nasatask.ViewModel.MainActivityViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import javax.inject.Inject
-import android.app.Dialog
-import android.graphics.Rect
-import android.view.LayoutInflater
-import android.view.Window
-import android.view.ViewGroup
-import androidx.recyclerview.widget.PagerSnapHelper
 import kotlinx.android.synthetic.main.dialog.view.*
-import com.app.nasatask.R
+import javax.inject.Inject
 
 
 class MainActivity: BaseActivity<MainActivityViewModel>() ,ImageAdapter.ClickEvent{
-
-
     @Inject
     lateinit var adapter:ImageAdapter
-
     @Inject
     internal lateinit var viewModel: MainActivityViewModel
-
-
     override fun layoutRes(): Int {
-        return com.app.nasatask.R.layout.activity_main
+        return R.layout.activity_main
     }
-
     @Inject
     lateinit var viewModeFactory: DaggerViewModelFactory
 

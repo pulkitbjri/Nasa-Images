@@ -1,10 +1,8 @@
 package com.app.nasatask.DI.Network
 
 import com.app.nasatask.Models.Apod
-
 import io.reactivex.Single
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {

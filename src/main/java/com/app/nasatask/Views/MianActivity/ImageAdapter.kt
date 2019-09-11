@@ -7,18 +7,14 @@ import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-
 import com.app.nasatask.Models.Apod
-
-import javax.inject.Inject
-
 import com.app.nasatask.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.fullscreen_pod_view.view.*
-import kotlinx.android.synthetic.main.main_pod_view.view.*
 import kotlinx.android.synthetic.main.main_pod_view.view.imageView
 import java.util.regex.Pattern
+import javax.inject.Inject
 
 
 class ImageAdapter @Inject

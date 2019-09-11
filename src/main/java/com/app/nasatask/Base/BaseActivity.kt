@@ -5,10 +5,9 @@ import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.lifecycle.ViewModel
 
-import butterknife.ButterKnife
 import dagger.android.support.DaggerAppCompatActivity
 import io.reactivex.annotations.Nullable
-import javax.inject.Inject
+
 
 abstract class BaseActivity<T : ViewModel>  : DaggerAppCompatActivity() {
 
@@ -22,7 +21,6 @@ abstract class BaseActivity<T : ViewModel>  : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(layoutRes())
         this.viewModel = viewModel ?: getViewModel()
-        ButterKnife.bind(this)
 
     }
 
