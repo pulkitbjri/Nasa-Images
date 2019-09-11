@@ -45,8 +45,7 @@ class ApodBoundaryCallback(
         else
             dateString= getTodaysdate()
 
-        Log.i("asdas", "asjbfjhads asdf hja $dateString")
-        val callback = apodService.apod(Constants.arr[Random().nextInt(Constants.arr.size)], dateString!!)
+        val callback = apodService.apod(Constants.APIKEY1, dateString!!)
 
         callback
             .subscribeOn(Schedulers.io())
@@ -69,7 +68,7 @@ class ApodBoundaryCallback(
 
     fun getdate(date: String?): String? {
 
-        var dateold=simpleDateFormat.parse(date)
+        val dateold=simpleDateFormat.parse(date)
         val cal = Calendar.getInstance()
         cal.time=dateold
         cal.add(Calendar.DATE, -1)
